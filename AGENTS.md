@@ -16,8 +16,9 @@ The toolbox release workflow (`release.yml`) calls the update script after build
 binaries. It clones this repo, regenerates formulas with updated versions and SHA256
 hashes, then commits and pushes.
 
-Requires a `TAP_GITHUB_TOKEN` secret in the toolbox repo (PAT with write access to
-this repo).
+Requires a `GH_TOKEN` secret in the toolbox repo (PAT with write access to this repo).
+The secret is named `TAP_GITHUB_TOKEN` in the toolbox repo settings and exposed as
+`GH_TOKEN` in the workflow.
 
 ## Formula conventions
 
