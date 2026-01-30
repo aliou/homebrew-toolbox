@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Audit formulas
+        run: |
+          brew tap-new --no-git aliou/toolbox
+          cp Formula/*.rb "$(brew --repository)/Library/Taps/aliou/homebrew-toolbox/Formula/"
+          for f in Formula/*.rb; do
+            name=$(basename "$f" .rb)
+            echo "Auditing $name..."
+            brew audit --formula "aliou/toolbox/$name" || true
+          done
+
+  install:
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        formula: [voice-memos, transcribe-audio]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ${{ matrix.formula }}
+        run: |
+          brew tap-new --no-git aliou/toolbox
+          cp Formula/*.rb "$(brew --repository)/Library/Taps/aliou/homebrew-toolbox/Formula/"
+          brew install aliou/toolbox/${{ matrix.formula }}
+
+      - name: Test ${{ matrix.formula }}
+        run: ${{ matrix.formula }} --version
