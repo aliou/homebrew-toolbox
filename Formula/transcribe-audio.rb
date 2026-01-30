@@ -17,6 +17,7 @@ class TranscribeAudio < Formula
       url "https://github.com/aliou/toolbox/releases/download/transcribe-audio@0.1.0/transcribe-audio-darwin-x64", using: :nounzip
       sha256 "d6277d61369e3a792f9bd9856fd036560763b3fee0c1ee2388788ce6afdf9852"
     end
+
   end
 
   on_linux do
@@ -29,6 +30,7 @@ class TranscribeAudio < Formula
       url "https://github.com/aliou/toolbox/releases/download/transcribe-audio@0.1.0/transcribe-audio-linux-x64", using: :nounzip
       sha256 "c91276cafd76cca9ede88f0ffabec86c8a03fef64b29a043e8a9d307a65ba07f"
     end
+
   end
 
   def install
