@@ -27,7 +27,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        formula: [voice-memos, transcribe-audio]
+        include:
+          - formula: voice-memos
+            binary: voice-memos
+          - formula: transcribe-audio
+            binary: transcribe-audio
+          - formula: linear-cli
+            binary: linear
+          - formula: fastmail-cli
+            binary: fastmail
     steps:
       - uses: actions/checkout@v4
 
@@ -38,4 +46,4 @@ jobs:
           brew install aliou/toolbox/${{ matrix.formula }}
 
       - name: Test ${{ matrix.formula }}
-        run: ${{ matrix.formula }} --version
+        run: ${{ matrix.binary }} --version
