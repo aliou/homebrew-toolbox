@@ -1,14 +1,14 @@
 class LinearCli < Formula
   desc "CLI for Linear via GraphQL API"
   homepage "https://github.com/aliou/linear-cli"
-  version "0.1.0"
+  version "0.2.1"
   license "MIT"
 
   depends_on :macos
   depends_on arch: :arm64
 
-  url "https://github.com/aliou/linear-cli/releases/download/v0.1.0/linear-darwin-arm64", using: :nounzip
-  sha256 "9c758b23cb1b0d3bbda611c279d3668664e75d65ccd9265e0df8a24d35470a06"
+  url "https://github.com/aliou/linear-cli/releases/download/v0.2.1/linear-darwin-arm64", using: :nounzip
+  sha256 "3929968d912edca2dba91024e4c41258343ba46aba179fd93497569c3bdab2d3"
 
   def install
     bin.install Dir["*"].first => "linear"
