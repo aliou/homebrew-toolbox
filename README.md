@@ -19,13 +19,13 @@ brew install obsdx
 
 | Formula            | Description                                      | Platforms                |
 | ------------------ | ------------------------------------------------ | ------------------------ |
-| `linear-cli`       | CLI for Linear via GraphQL API                   | macOS arm64              |
-| `fastmail-cli`     | CLI for FastMail via JMAP                        | macOS arm64              |
-| `voice-memos`      | Browse and export Apple Voice Memos              | macOS                    |
-| `transcribe-audio` | Transcribe audio files using whisper.cpp         | macOS, Linux             |
-| `sesame`           | BM25 search for coding agent sessions            | macOS arm64, Linux       |
-| `pmd`              | Terminal markdown pager with syntax highlighting | macOS arm64, Linux arm64 |
-| `obsdx`            | Headless Obsidian vault intelligence CLI         | macOS arm64, Linux arm64 |
+| [`linear-cli`](https://github.com/aliou/linear-cli)       | CLI for Linear via GraphQL API                   | macOS arm64              |
+| [`fastmail-cli`](https://github.com/aliou/fastmail-cli)   | CLI for FastMail via JMAP                        | macOS arm64              |
+| `voice-memos`                                             | Browse and export Apple Voice Memos              | macOS                    |
+| `transcribe-audio`                                        | Transcribe audio files using whisper.cpp         | macOS, Linux             |
+| [`sesame`](https://github.com/aliou/sesame)               | BM25 search for coding agent sessions            | macOS arm64, Linux       |
+| [`pmd`](https://github.com/aliou/preview-markdown)        | Terminal markdown pager with syntax highlighting | macOS arm64, Linux arm64 |
+| [`obsdx`](https://github.com/aliou/obsdx)                 | Headless Obsidian vault intelligence CLI         | macOS arm64, Linux arm64 |
 
 ## How it works
 
